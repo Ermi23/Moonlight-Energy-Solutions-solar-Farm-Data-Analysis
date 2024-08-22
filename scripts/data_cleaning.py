@@ -1,3 +1,5 @@
+# data_cleaning.py
+
 import pandas as pd
 
 class DataCleaning:
@@ -9,5 +11,6 @@ class DataCleaning:
         return self.df
 
     def fill_missing_values(self, column, value):
-        self.df[column].fillna(value, inplace=True)
+        # Update to avoid using inplace=True
+        self.df[column] = self.df[column].fillna(value)
         return self.df
