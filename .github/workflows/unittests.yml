@@ -17,9 +17,9 @@ jobs:
 
     # This section defines the steps that will be executed as part of the job
     steps:
-    - uses: actions/checkout@v2 # Checks out the repository code
+    - uses: actions/checkout@v3 # Updated to v3 for compatibility with Node.js 16 and 20
     - name: Set up Python # Sets up the Python environment
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v4 # Updated to v4 for compatibility with Node.js 16 and 20
       with:
         python-version: '3.12' # Specifies the Python version to use
 
