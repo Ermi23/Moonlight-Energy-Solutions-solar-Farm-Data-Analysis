@@ -1,4 +1,4 @@
-name: Python application  # This is the name of the GitHub Actions workflow
+name: Python unit tests  # This is the name of the GitHub Actions workflow
 
 # This section specifies the events that will trigger the workflow
 on:
@@ -21,7 +21,7 @@ jobs:
     - name: Set up Python # Sets up the Python environment
       uses: actions/setup-python@v2
       with:
-        python-version: '3.12.0' # Specifies the Python version to use
+        python-version: '3.12' # Specifies the Python version to use
 
     # This step installs the required dependencies for the project
     - name: Install dependencies
@@ -32,4 +32,4 @@ jobs:
     # This step runs the tests for the Python application
     - name: Run tests
       run: |
-        pytest
+        python -m unittest discover -s tests
