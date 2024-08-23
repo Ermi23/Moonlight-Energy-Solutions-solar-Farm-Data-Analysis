@@ -6,13 +6,13 @@ import os
 # Add your scripts folder to the Python path
 # sys.path.append('C:/Moonlight-Energy-Solutions-solar-farm-data-Analysis/scripts')
 
-from ..scripts.time_series import TimeSeriesAnalysis
-from ..scripts.bubble_charts import BubbleCharts
-from ..scripts.correlation_analysis import CorrelationAnalysis
-from ..scripts.histograms import Histograms
-from ..scripts.temperature_humidity import TemperatureHumidityAnalysis
-from ..scripts.wind_analysis import WindAnalysis
-from ..scripts.z_score import ZScoreAnalysis
+from scripts.time_series import TimeSeriesAnalysis
+from scripts.bubble_charts import BubbleCharts
+from scripts.correlation_analysis import CorrelationAnalysis
+from scripts.histograms import Histograms
+from scripts.temperature_humidity import TemperatureHumidityAnalysis
+from scripts.wind_analysis import WindAnalysis
+from scripts.z_score import ZScoreAnalysis
 # from ..scripts.wind_analysis import WindAnalysis
 
 # Function to load the data
