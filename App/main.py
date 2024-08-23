@@ -5,14 +5,20 @@ import os
 
 # Add your scripts folder to the Python path
 # sys.path.append('C:/Moonlight-Energy-Solutions-solar-farm-data-Analysis/scripts')
+# Determine the base directory of the project dynamically
+base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 
-from scripts.time_series import TimeSeriesAnalysis
-from scripts.bubble_charts import BubbleCharts
-from scripts.correlation_analysis import CorrelationAnalysis
-from scripts.histograms import Histograms
-from scripts.temperature_humidity import TemperatureHumidityAnalysis
-from scripts.wind_analysis import WindAnalysis
-from scripts.z_score import ZScoreAnalysis
+# Add the 'scripts' directory to sys.path
+scripts_path = os.path.join(base_dir, 'scripts')
+sys.path.append(scripts_path)
+
+from time_series import TimeSeriesAnalysis
+from bubble_charts import BubbleCharts
+from correlation_analysis import CorrelationAnalysis
+from histograms import Histograms
+from temperature_humidity import TemperatureHumidityAnalysis
+from wind_analysis import WindAnalysis
+from z_score import ZScoreAnalysis
 # from ..scripts.wind_analysis import WindAnalysis
 
 # Function to load the data
