@@ -3,6 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 from scipy import stats
+import streamlit as st
 
 class ZScoreAnalysis:
   def __init__(self, df):
@@ -70,3 +71,20 @@ class ZScoreAnalysis:
       plt.xlabel(columns[i])
       plt.ylabel(columns[i+1])
       plt.show()
+      
+    def calculate_z_scores(self, columns):
+        self.z_scores = self.df[columns].apply(lambda x: (x - x.mean()) / x.std(), axis=0)
+
+    def plot_z_scores(self):
+        self.z_scores.plot(figsize=(12, 6))
+        plt.title("Z-score Analysis")
+        plt.xlabel("Index")
+        plt.ylabel("Z-score")
+        plt.show()
+
+    def plot_z_scores_streamlit(self):
+        self.z_scores.plot(figsize=(12, 6))
+        plt.title("Z-score Analysis")
+        plt.xlabel("Index")
+        plt.ylabel("Z-score")
+        st.pyplot(plt)
