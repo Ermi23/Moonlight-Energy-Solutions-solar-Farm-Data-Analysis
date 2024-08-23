@@ -1,7 +1,3 @@
-# Define columns for Z-score analysis (replace with your actual columns)
-# columns_to_analyze = ['GHI', 'DNI', 'DHI', 'ModA', 'ModB', 'Tamb', 'RH', 'WS', 'WSgust', 'WSstdev', 'WD', 'WDstdev', 'BP', 'Precipitation', 'TModA', 'TModB']
-
-# Import libraries
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
